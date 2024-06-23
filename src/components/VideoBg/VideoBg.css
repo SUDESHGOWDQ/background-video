@@ -1,0 +1,78 @@
+.videobg-container {
+	position: relative;
+	width: 100%;
+}
+
+.videobg-container.full-screen {
+	height: 100vh;
+}
+
+.videobg-container.darken {
+	/* background-color: rgba(0, 0, 0, 0.3); */
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.1),
+		rgba(0, 0, 0, 0.2),
+		rgba(0, 0, 0, 0.9)
+	);
+}
+
+.videobg-container .overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	right: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 0px 15px;
+}
+
+.videobg-container .overlay h1 {
+	font-family: 'Urbanist', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
+	color: #fff;
+	font-size: 86px;
+	text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+	text-transform: uppercase;
+}
+
+.videobg-container .overlay p {
+	color: #fff;
+	max-width: 800px;
+	margin: 20px auto 0 auto;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.videobg-container video {
+	width: 100%;
+	/* height: auto; */
+	height: 750px;
+	object-fit: cover;
+	z-index: -1;
+	position: relative;
+}
+
+.videobg-container.full-screen video {
+	height: 100%;
+	object-fit: cover;
+}
+
+@media all and (max-width: 1024px) {
+	.videobg-container .overlay h1 {
+		font-size: 62px;
+	}
+}
+
+@media all and (max-width: 900px) {
+	.videobg-container .overlay h1 {
+		font-size: 56px;
+	}
+}
+
+@media all and (max-width: 676px) {
+	.videobg-container .overlay h1 {
+		font-size: 32px;
+	}
+}
